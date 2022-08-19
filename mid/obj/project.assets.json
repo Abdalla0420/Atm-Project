@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yahyahaail/Projects/atm/mid/mid.csproj",
+      "projectUniqueName": "/Users/yahyahaail/Desktop/Projects/Atm-Project/mid/mid.csproj",
       "projectName": "mid",
-      "projectPath": "/Users/yahyahaail/Projects/atm/mid/mid.csproj",
+      "projectPath": "/Users/yahyahaail/Desktop/Projects/Atm-Project/mid/mid.csproj",
       "packagesPath": "/Users/yahyahaail/.nuget/packages/",
-      "outputPath": "/Users/yahyahaail/Projects/atm/mid/obj/",
+      "outputPath": "/Users/yahyahaail/Desktop/Projects/Atm-Project/mid/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yahyahaail/.nuget/NuGet/NuGet.Config"
