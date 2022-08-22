@@ -3,11 +3,12 @@ namespace mid
 {
     public class CardHolder
     {
-        string _cardNum;
-        int _pin;
-        string _firstName;
-        string _lastName;
-        double _balance;
+        public string _cardNum { get; set; }
+        public int _pin { get; set; }
+        public string _firstName { get; set; }
+        public string _lastName{ get; set; }
+        public double _balance { get; set; }
+        public bool _pinCorrect { get; set; }
 
 
         public CardHolder(string cardNum, int pin, string firstName, string lastName, double balance)
@@ -17,37 +18,7 @@ namespace mid
             _firstName = firstName;
             _lastName = lastName;
             _balance = balance;
-
-        }
-
-        public string getNum()
-        {
-            return _cardNum;
-        }
-
-        public int getPin()
-        {
-            return _pin;
-        }
-
-        public string getFirstName()
-        {
-            return _firstName;
-        }
-
-        public string getLastName()
-        {
-            return _lastName;
-        }
-
-        public double getBalance()
-        {
-            return _balance;
-        }
-
-        public string getCardNum()
-        {
-            return _cardNum;
+            _pinCorrect = false;
         }
         public void setNum(string newCardNum)
         {

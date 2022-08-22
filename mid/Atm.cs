@@ -3,42 +3,50 @@ namespace mid
 {
     public class Atm
     {
-        CardHolder _cardHolder;
-
-
-
-        public void deposit(CardHolder currentUser)
+        public bool DepositMoney(CardHolder cardHolder, int money)
         {
-            Console.WriteLine("How much $$ would you like to deposit: ");
-            double deposit = double.Parse(Console.ReadLine());
-            currentUser.setBalance(currentUser.getBalance() + deposit);
-            Console.WriteLine("Thank you for your $$. Your new balance is: " + currentUser.getBalance());
+            if (!cardHolder._pinCorrect && CheckDepositAmount(money))
+            {
+                cardHolder.setBalance(cardHolder._balance + money);
+                return true;
+            }
+            return false;
         }
 
-        public void withdraw(CardHolder currentUser)
+        private bool CheckDepositAmount(int money)
         {
-            Console.WriteLine("How much $$ would you like to withdraw: ");
-            double withdrawal = double.Parse(Console.ReadLine());
-            //check if the user has enough money
-            if (currentUser.getBalance() < withdrawal)
+            if (money  > 10 && money < 300)
             {
-                Console.WriteLine("Insuffcient funds :(");
+                return true;
             }
-
-
-            else
-            {
-                double newBalance = currentUser.getBalance() - withdrawal;
-                currentUser.setBalance(newBalance);
-                Console.WriteLine("Thank you for your patience. Your new balance is: " + currentUser.getBalance()); ;
-            }
-
+            return false;
         }
+
+        public bool WithdrawalMoney(CardHolder cardHolder, int money)
+        {
+            if (!cardHolder._pinCorrect && CheckWithdrawalAmount(money))
+            {
+                cardHolder.setBalance(cardHolder._balance + money);
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckWithdrawalAmount(int money)
+        {
+            if (money > 10 && money < 250)
+            {
+                return true;
+            }
+            return false;
+        }    
 
         public void balance(CardHolder currentUser)
+            
         {
             Console.WriteLine("CUrrent balance: " + currentUser.getBalance());
         }
+        
     }
 }
 

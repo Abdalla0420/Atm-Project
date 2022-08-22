@@ -7,8 +7,15 @@ public class Program
     {
         string test = "test";
         CardHolder testCard = new CardHolder("234",1234,"card1","",246);
-
+        
         Atm atm = new Atm();
+        List<CardHolder> cardHolders = new List<CardHolder>();
+        cardHolders.Add(new CardHolder("999", 1234, "John", "griffith", 158.23));
+        cardHolders.Add(new CardHolder("3857439694036835", 7544, "Bob", "ling", 25.32));
+        cardHolders.Add(new CardHolder("3295789357429543", 9838, "Steve", "shaba", 119.98));
+        cardHolders.Add(new CardHolder("9437684935947369", 9684, "Garry", "utah", 657.11));
+        cardHolders.Add(new CardHolder("234", 1234, "card1", "", 246));
+        
 
         void printOptions()
         {
@@ -18,14 +25,6 @@ public class Program
             Console.WriteLine("3. Show Balance");
             Console.WriteLine("4. Exit");
         }
-
-        List<CardHolder> cardHolders = new List<CardHolder>();
-        cardHolders.Add(new CardHolder("999", 1234, "John", "griffith", 158.23));
-        cardHolders.Add(new CardHolder("3857439694036835", 7544, "Bob", "ling", 25.32));
-        cardHolders.Add(new CardHolder("3295789357429543", 9838, "Steve", "shaba", 119.98));
-        cardHolders.Add(new CardHolder("9437684935947369", 9684,"Garry", "utah", 657.11));
-        cardHolders.Add(new CardHolder("234", 1234, "card1", "", 246));
-
         Console.WriteLine("welcome to simpleATM");
 
         Console.WriteLine("please instert your debit card");
@@ -62,6 +61,7 @@ public class Program
         int option = 0;
 
         do
+
         {
             printOptions();
             try
